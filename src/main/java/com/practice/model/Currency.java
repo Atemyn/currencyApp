@@ -7,7 +7,6 @@ import java.sql.Date;
 @Table(name = "currency")
 public class Currency {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @Column(name = "CharCode")
     private String charCode;
@@ -17,8 +16,8 @@ public class Currency {
     private long nominal;
     @Column(name = "Value")
     private long value;
-    @Column(name = "Date")
-    private Date date;
+
+
 
     public Currency() {
     }
@@ -58,4 +57,5 @@ public class Currency {
     public void setValue(long value) {
         this.value = value;
     }
+
 }
