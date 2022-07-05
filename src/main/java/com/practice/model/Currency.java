@@ -7,20 +7,27 @@ import java.sql.Date;
 @Table(name = "currency")
 public class Currency {
     @Id
-    private long id;
+    private int id;
     @Column(name = "CharCode")
     private String charCode;
     @Column(name = "Name")
     private String name;
     @Column(name = "Nominal")
-    private long nominal;
+    private int nominal;
     @Column(name = "Value")
-    private long value;
-
-
+    private int value;
 
     public Currency() {
     }
+
+    public Currency(int id, String charCode, String name, int nominal, int value) {
+        this.id = id;
+        this.charCode = charCode;
+        this.name = name;
+        this.nominal = nominal;
+        this.value = value;
+    }
+
 
     public long getId() {
         return id;
@@ -46,7 +53,7 @@ public class Currency {
         return nominal;
     }
 
-    public void setNominal(long nominal) {
+    public void setNominal(int nominal) {
         this.nominal = nominal;
     }
 
@@ -54,7 +61,7 @@ public class Currency {
         return value;
     }
 
-    public void setValue(long value) {
+    public void setValue(int value) {
         this.value = value;
     }
 
