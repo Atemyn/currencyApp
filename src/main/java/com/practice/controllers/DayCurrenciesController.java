@@ -13,7 +13,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("/currency")
-public class DayCurrencyController {
+public class DayCurrenciesController {
 
     @Autowired
     private CurrencyRepository currencyRepository;

@@ -12,11 +12,11 @@ import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/currencies")
-public class CurrencyController {
+public class CurrenciesController {
     private final CurrencyDAO currencyDAO;
 
     @Autowired
-    public CurrencyController(CurrencyDAO currencyDAO) {
+    public CurrenciesController(CurrencyDAO currencyDAO) {
         this.currencyDAO = currencyDAO;
     }
 
