@@ -9,7 +9,9 @@ import java.util.Date;
 @Table(name = "DayCurrency")
 public class DayCurrency {
     @Id
-    private int id;
+    private int PK_id;
+    @Column(name = "nominal")
+    private int nominal;
     @Column(name = "value")
     private double value;
     @Column(name = "date")
@@ -18,12 +20,20 @@ public class DayCurrency {
     public DayCurrency(){
 
     }
-    public int getId() {
-        return id;
+    public int getPK_Id() {
+        return PK_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPK_Id(int PK_id) {
+        this.PK_id = PK_id;
+    }
+
+    public int getNominal() {
+        return nominal;
+    }
+
+    public void setNominal(int nominal) {
+        this.nominal = nominal;
     }
 
     public double getValue() {
